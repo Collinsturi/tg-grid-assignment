@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Grid Container for the feed */
+
+#feed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#feed > :nth-child(1) {
+  grid-column: span 2;
+}
+
+#feed > :nth-child(3) {
+  grid-row: span 2/2;
+  grid-column: 4;
+}
+
+#feed > :nth-child(5) {
+  grid-column: span 2;
+}
+
+/* Grid Container Elements */
+
+.feed-remark-1 {
+  background-color: rgb(71, 13, 109);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  margin: 1rem;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60px;
+}
+
+.feed-remark-1 img {
+  width: 2rem;
+  height: auto;
+  border-radius: 10rem;
+}
+
+.feed-remark-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.feed-remark-title-identifier {
+  margin-left: 0.5rem;
+}
+
+.feed-remark-title-identifier h4 {
+  font-size: 1rem;
+}
+
+.feed-remark-title-identifier p {
+  font-size: 0.6rem;
+}
+
+.feed-remark-punchline {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.feed-remark-statement {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.feed-remark-2 {
+  background-color: rgb(77, 76, 109);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  margin: 1rem;
+}
+
+.feed-remark-2 img {
+  width: 2rem;
+  height: auto;
+  border-radius: 10rem;
+}
+
+.feed-remark-3 {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  margin: 1rem;
+}
+
+.feed-remark-3 img {
+  width: 2rem;
+  height: auto;
+  border-radius: 10rem;
+}
+
+.feed-remark-4 {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  margin: 1rem;
+}
+
+.feed-remark-4 img {
+  width: 2rem;
+  height: auto;
+  border-radius: 10rem;
+}
+
+.feed-remark-5 {
+  background-color: rgb(12, 4, 40);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  margin: 1rem;
+}
+
+.feed-remark-5 img {
+  width: 2rem;
+  height: auto;
+  border-radius: 10rem;
+}
+
+@media screen and (max-width: 999px) {
+  #feed {
+    display: grid; /* Ensure grid is enabled */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  #feed > :nth-child(1) {
+    grid-column: span 2;
+  }
+
+  #feed > :nth-child(3) {
+    grid-row: span 2;
+    grid-column: 2;
+  }
+
+  #feed > :nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #feed {
+    display: grid; /* Ensure grid is enabled */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  #feed > :nth-child(1) {
+    grid-column: span 1;
+  }
+
+  #feed > :nth-child(3) {
+    grid-row: span 2;
+    grid-column: 1;
+  }
+
+  #feed > :nth-child(5) {
+    grid-column: span 1;
+  }
+}
