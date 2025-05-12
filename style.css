@@ -146,10 +146,15 @@ body {
 }
 
 @media screen and (max-width: 999px) {
+  body {
+    /* This makes it so that the when the contents exceed it will enable scrolling */
+    overflow-x: auto;
+  }
   #feed {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    margin-top: 1rem !important;
   }
 
   #feed > :nth-child(1) {
@@ -167,11 +172,15 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  body {
+    overflow-x: auto;
+  }
   #feed {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
+    margin-top: 75rem !important;
   }
 
   #feed > * {
